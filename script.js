@@ -26,10 +26,25 @@ function reminder () {
 //setTimeout(reminder,5000);
 function valide() {
     var name = document.getElementById('name').value;
-    var password = document.getElementById('password').value;
+    //var password = document.getElementById('password').value;
     
     var reg_name = /^[a-zа-я]+$/i;
-    var pass_name = /^[a-z0-9]{5,100}$/i
+//    var pass_name = /^[a-z0-9]{5,100}$/i;
+    
+    if (reg_name.test(name) == false) {
+        alert('error');
+        document.getElementById('name').value = ''
+        
+        
+    }
+//    if (pass_name.test(password) == false) {
+//        alert('error_p');
+//    }
+   
 }
 
 document.querySelector('.button').addEventListener('click', valide);
+
+console.log(document.getElementById('_link'))
+document.getElementById('_link').href = ''
+console.log(document.getElementById('_link').href )

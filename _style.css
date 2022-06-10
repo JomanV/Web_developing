@@ -6,9 +6,9 @@
             /* Левый нижний угол */
             padding: 10px;
             /* Поля вокруг текста */
-            background: #39b54a;
+            background: #8539b5;
             /* Цвет фона */
-            color: #fff;
+            color: lightgray;
             /* Цвет текста */
             width: 100%;
             /* Ширина слоя */
@@ -21,6 +21,7 @@ li {
 .main_text {
     font-size: 20px;
     text-align: center;
+    color: lightgray;
 }
 
 input {
@@ -33,27 +34,16 @@ input {
     margin: 10px 10px 15px 10px ;
 }
 
-.button {
-    background: cornflowerblue;
-    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-    border-radius: 10px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    text-align: center;
-    color: #FFFFFF;
-    text-transform: uppercase;
-}
-
 button {
-    background: cornflowerblue;
+    background: #8539b5;
     box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
     border-radius: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
     text-align: center;
-    color: #FFFFFF;
+    color: lightgray;
     text-transform: uppercase;
+    
 }
 
