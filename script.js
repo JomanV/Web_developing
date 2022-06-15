@@ -1,39 +1,28 @@
-//import random 
-//alert("Привет")
-//var num = 0;
-//var our = prompt("Ввод");
-//function gameGuess(num,our) {
-//    if (our > num) {
-//        return gameGuess(num,prompt("Меньше"));
-//    } 
-//    else if (our < num) {
-//        return gameGuess(num, prompt("Больше"));
-//    } 
-//    else if (our == num) {
-//        alert('Угадал')
-//
-//    }
-//}
-//gameGuess(num,our);
-//function reminder () {
-//    alert('А-нука отвечай, а то выкину!');
-////    window.close;
-//}
-//setTimeout(reminder,5000);
-function valide() {
-    var name = document.getElementById('name').value;
-    //var password = document.getElementById('password').value;
-    var reg_name = /^[a-zа-я]+$/i;
-    //    var pass_name = /^[a-z0-9]{5,100}$/i;
-    if (reg_name.test(name) === false) {
+'use strict';
+let domen = document.location.pathname;
+if(domen == '/index.html'){
+document.querySelector('button').addEventListener('click', () => {
+    let name = document.getElementById('name').value
+        , reg_name = /^[a-zа-я]+$/i;
+    if (!reg_name.test(name)) {
         alert('error');
         document.getElementById('name').value = '';
+    } else {
+        localStorage.setItem('name', name);
+        location.href = "task_1.html";
     }
+});
 }
-//    if (pass_name.test(password) == false) {
-//        alert('error_p');
-//    }
-document.querySelector('.button').addEventListener('click', valide);
-//console.log(document.getElementById('_link'));
-//document.getElementById('_link').href = '';
-//console.log(document.getElementById('_link').href);
+
+else if(domen == '/task_1.html') {
+  
+    document.querySelector('div[class="choice"]').addEventListener('click', () => {
+      let rightAnswers = 0;
+      for(let i = 1; i<=4; i++){
+        let _element = document.getElementById(String(i));
+        
+        console.log(_element.value)
+        }
+    });
+
+}
