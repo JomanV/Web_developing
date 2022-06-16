@@ -52,11 +52,12 @@ input[type='checkbox'] {
   background: #8539b5;
   box-shadow: 3px 3px 10px white;
   border-radius: 10px;
-  line-height: 26px;
+  line-height: 30px;
   text-align: center;
   color: lightgray;
   text-transform: uppercase;
-  width: 130px;
+  width: 140px;
   margin: 10px;
   font-family: 'Lobster', cursive;
+
 }

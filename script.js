@@ -20,6 +20,10 @@ else if (domen == '/page_result.html') {
   for (let i = 1; i<=5;i++){
     sum += Number(localStorage.getItem('Right Answers_' + String(i)));
   }
+  name = localStorage.getItem('Name');
+  document.getElementById("react_text").innerHTML = (sum*5 < 70) ? `Попробуйте, еще раз, ${name}. У вас все получиться!`: 
+  (sum*5 <= 80) ? `Поздравляем, ${name}! У вас много знаний об языке html!`: 
+  `Невероятно, ${name}! Вы знаете язык html на высшем уровне!`;
   document.getElementById("result").innerHTML = `${sum*5}%`;
   document.querySelector('.button').addEventListener('click', () =>{
     localStorage.clear();
