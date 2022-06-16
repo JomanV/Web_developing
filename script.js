@@ -16,6 +16,11 @@ if (domen == '/index.html') {
   });
 }
 else if (domen == '/page_result.html') {
+  let sum = 0;
+  for (let i = 1; i<=5;i++){
+    sum += Number(localStorage.getItem('Right Answers_' + String(i)));
+  }
+  document.getElementById("result").innerHTML = `${sum*5}%`;
   document.querySelector('.button').addEventListener('click', () =>{
     localStorage.clear();
     location.href = 'index.html';
