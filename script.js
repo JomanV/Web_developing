@@ -1,5 +1,8 @@
 'use strict';
-let domen = document.location.pathname;
+let domen = document.location.href;
+for(let i=domen.length; i>=0; i--){
+  domen = (domen[i]== "/" ) ? domen.slice(i): domen;
+}
 if (domen == '/index.html') {
   localStorage.clear();
   document.querySelector('.button').addEventListener('click', () => {
